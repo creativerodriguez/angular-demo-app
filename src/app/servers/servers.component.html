@@ -1,0 +1,29 @@
+<!--
+
+the servers.component.html can be edited to remove the
+templateUrl property, and use a template property to generate
+inline html like the following. This can be used for small 
+snippets of code, but tempateUrl is recommended.
+The name is true for styleUrls as well, with styles property.
+Both use an array for items
+
+Selector can be used to select element div, attributes [href], classes .class, etc.
+Similar to the css selector methods
+
+@Component({
+	selector: div | [href] | .class
+	...
+	template: `
+	<app-server></app-server>
+	<app-server></app-server>
+	`,
+	...
+	styles: [
+		h3 {
+			color: blue;
+		}
+	]
+})
+-->
+<app-server></app-server>
+<app-server></app-server>
