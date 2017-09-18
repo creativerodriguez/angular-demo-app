@@ -8,10 +8,12 @@ The name is true for styleUrls as well, with styles property.
 Both use an array for items
 
 Selector can be used to select element div, attributes [href], classes .class, etc.
-Similar to the css selector methods
+Similar to the css selector methods. Selecting by ID will not work.
 
 @Component({
-	selector: div | [href] | .class
+	selector: app-element
+	selector: [app-attribute]
+	selector: .app-class
 	...
 	template: `
 	<app-server></app-server>
@@ -27,3 +29,13 @@ Similar to the css selector methods
 -->
 <app-server></app-server>
 <app-server></app-server>
+<br/>
+<br/>
+<h4>Testing Property Binding</h4>
+<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<p [innerText]="allowNewServer"></p>
+<br/>
+<br/>
+<h4>Testing Property Binding</h4>
+<br/>
+<br/>

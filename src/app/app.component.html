@@ -8,6 +8,11 @@
           </ul>
         </nav>
         <h3 class="text-muted">Angular 4 Demo Application</h3>
+        <!-- Demo was created from watching the following video
+	        Angular 4 - The Basics from (UDemy Course Excerpt), https://www.youtube.com/watch?v=htPYk6QxacQ
+	        and the following book
+	        Beginning Angular with Typescript, https://github.com/greglim81
+        -->
       </div>
 
       <div class="jumbotron text-center">
@@ -17,7 +22,7 @@
 
       <div class="row marketing">
         <div class="col-lg-6">
-            <h4>Testing Data Binding</h4>
+            <h4>Testing Two Way Data Binding</h4>
 			<!-- Using [(ngModel)] causes an error 
 			in app.module.ts, on line 3, add <import { FormsModule } from '@angular/forms';> inside the <imports array, under BrowserModule, add `FormsModule>﻿
 			Databinding from Form elements will then work properly
@@ -27,6 +32,7 @@
 			<input type="text" [(ngModel)]="name">
 			<p>{{name}}</p>
 			<hr>
+			<h4>Testing String Interpolation</h4>
 			<app-servers></app-servers>
         </div>
 
