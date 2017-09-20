@@ -27,15 +27,24 @@ Similar to the css selector methods. Selecting by ID will not work.
 	]
 })
 -->
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 <br/>
 <br/>
-<h4>Testing Property Binding</h4>
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
-<p [innerText]="allowNewServer"></p>
-<br/>
-<br/>
-<h4>Testing Property Binding</h4>
+<h4>Testing Property Binding and Two-Way Data Binding</h4>
+<label>Server Name:</label>
+<input type="text" class="form-control" [(ngModel)]="serverName"> <!-- (input)="onUpdateServerName($event)" -->
+<!-- <p>{{ serverName }}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- General rule, add only small amounts of logic on inline code, 
+	larger amounts of logic should be handled by a called method -->
+<!-- <p [innerText]="severCreationStatus"></p> -->
+<p *ngIf="serverCreated; else noServer;">Server was created, server name is {{ serverName }}</p>
+<ng-template #noServer>
+	<p>No server was created.</p>
+</ng-template>
+<!-- Don't mix property binding with string interpolation,
+	[disabled]="!allowNewServer" is a TypeScript expression 
+-->
+
 <br/>
 <br/>
