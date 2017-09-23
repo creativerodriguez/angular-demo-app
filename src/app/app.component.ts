@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular 4 Demo Application by Orlando Rodriguez';
-  name = '';
+  imageUrl = 'https://www.w3schools.com/html/pic_mountain.jpg';
 }
