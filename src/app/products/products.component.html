@@ -1,6 +1,14 @@
-<h4>List of Products</h4>
+<h4>List of Products using Dependency Injection</h4>
 <ul>
-	<li *ngFor="let product of products">
-	    {{product}}
-	</li>
+    <div *ngIf="products.length > 0">        
+        <div *ngFor="let product of products">
+            <app-product [data]="product"></app-product>
+        </div>
+    </div>
+    <div *ngIf="products.length == 0">
+        No products to display
+    </div>
+	
+<h4>Test Binding to User Input Events</h4>
+	<button (click)="onClickThis($event)" class="btn btn-primary" [class.disabled]="!isValid">Submit</button>
 </ul>

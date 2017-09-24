@@ -15,13 +15,21 @@
         -->
       </div>
 
-      <div class="jumbotron text-center">
-        <h1 class="display-3"> Welcome to {{title}}!</h1>
-		  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+      <div class="jumbotron text-left">
+		  <img class="angular-logo" width="100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+        <h1 class="jumbotron-title"> Welcome to {{title}}!</h1>
       </div>
 
       <div class="row marketing">
         <div class="col-lg-6 col-md-6">
+	        <img class="img-fluid sample" src="{{ imageUrl }}"/>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <h4>Testing Rating Component</h4>
+            <p>Click the stars to set the rating</p>
+            <app-rating></app-rating>
+            <br/>
             <h4>Testing Two Way Data Binding</h4>
 			<!-- Using [(ngModel)] causes an error 
 			in app.module.ts, on line 3, add <import { FormsModule } from '@angular/forms';> inside the <imports array, under BrowserModule, add `FormsModule>﻿
@@ -36,11 +44,19 @@
 			<app-servers></app-servers>
         </div>
 
-        <div class="col-lg-6 col-md-6">
-            <products></products>
+        <div class="col-lg-12 col-md-12">
+            <app-products></app-products>
         </div>
+        
 
+        
         <div class="col-lg-6 col-md-6">
+          <h4></h4>
+            
+        </div>
+      </div>
+
+        <div class="col-lg-12 col-md-12">
           <h4>Here are some links to help you start: </h4>
 			<ul>
 			  <li>
@@ -53,15 +69,7 @@
 			    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
 			  </li>
 			</ul>
-
-        <div class="col-lg-6 col-md-6">
-            <h4>Testing</h4>
-
         </div>
-
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-      </div>
 
       <footer class="footer">
         <p>&copy; Creative Rodriguez, LLC 2017</p>

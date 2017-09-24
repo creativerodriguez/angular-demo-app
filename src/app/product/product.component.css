@@ -1,0 +1,10 @@
+.media {
+	margin-bottom: 20px;
+}
+.media img {
+	max-width: 150px;
+	float: left; 
+}
+.media 	.media-body {
+	padding-left: 25px;
+}

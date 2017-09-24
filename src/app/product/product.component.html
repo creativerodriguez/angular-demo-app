@@ -1,0 +1,21 @@
+<div class="media">
+	
+  <img class="d-flex mr-3" src="{{ data.imageUrl }}" alt="Generic placeholder image">
+
+  <div class="media-body">
+    <h5 class="mt-0">{{ data.productName }}</h5>
+    {{ data.releasedDate  | date }} <!-- date:"MM/dd/yy" -->
+    <br/>
+    <app-rating [rating-value]="data.rating" [numOfReviews]="data.numOfReviews"></app-rating>
+    <div [ngSwitch]="data.rating">
+	    <p *ngSwitchCase="1">Poor</p>
+	    <p *ngSwitchCase="2">Fair</p>
+	    <p *ngSwitchCase="3">Good</p>
+	    <p *ngSwitchCase="4">Very Good</p>
+	    <p *ngSwitchCase="5">Excellent</p>
+	    <p *ngSwitchDefault>Not Rated</p>
+    </div>
+    {{ data.description }}
+  </div>
+  <hr>
+</div>
