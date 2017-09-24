@@ -10,6 +10,10 @@ import { RatingComponent } from './rating/rating.component';
 import { ProductComponent } from './product/product.component';
 import { TruncatePipe } from './products/truncate.pipe';
 import { BsJumbotronComponent } from './bs-jumbotron/bs-jumbotron.component';
+import { UserComponent } from './user/user.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MdfComponent } from './mdf/mdf.component';
+import { LoginService } from './mdf/login.service';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,17 @@ import { BsJumbotronComponent } from './bs-jumbotron/bs-jumbotron.component';
     RatingComponent,
     ProductComponent,
     TruncatePipe,
-    BsJumbotronComponent
+    BsJumbotronComponent,
+    UserComponent,
+    MdfComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
