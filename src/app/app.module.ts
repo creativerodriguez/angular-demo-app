@@ -14,6 +14,7 @@ import { UserComponent } from './user/user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MdfComponent } from './mdf/mdf.component';
 import { LoginService } from './mdf/login.service';
+import { ObservableFormComponent } from './observable-form/observable-form.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginService } from './mdf/login.service';
     TruncatePipe,
     BsJumbotronComponent,
     UserComponent,
-    MdfComponent
+    MdfComponent,
+    ObservableFormComponent
   ],
   imports: [
     BrowserModule,
