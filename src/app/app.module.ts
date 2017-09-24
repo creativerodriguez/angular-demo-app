@@ -8,6 +8,8 @@ import { ServersComponent } from './servers/servers.component';
 import { ProductsComponent } from './products/products.component';
 import { RatingComponent } from './rating/rating.component';
 import { ProductComponent } from './product/product.component';
+import { TruncatePipe } from './products/truncate.pipe';
+import { BsJumbotronComponent } from './bs-jumbotron/bs-jumbotron.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ProductComponent } from './product/product.component';
     ServersComponent,
     ProductsComponent,
     RatingComponent,
-    ProductComponent
+    ProductComponent,
+    TruncatePipe,
+    BsJumbotronComponent
   ],
   imports: [
     BrowserModule,
